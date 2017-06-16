@@ -37,7 +37,8 @@ public class SchemaScores {
                 // Get the scores in a way we can handle.  We want to know the lowest HOMEWORK score.
                 // One approach is to just know the corresponding type/score to create as a filter
                 // MIGHT be possible to identify the individual element and remove it explicitly
-                List<Document> l = (List<Document>)c.get("scores");
+//                List<Document> l = (List<Document>)c.get("scores");
+                List<Document> l = c.get("scores", List.class);
                 double m=9999999.9;
                 int i=0,p=0;
                 for (Document d:l){
